@@ -30,6 +30,6 @@ def CreateQuadrant(height, dir):
         CreateQuadrant(wh, wd)
 
 def Menu():
-    CreateArray(input("Input Height: "))
+    CreateArray(4)
 
 Menu()
