@@ -1,7 +1,15 @@
 def CreateArray(size):
     board = [[[0,0] for i in range(size)] for j in range(size)]
-    CreateQuadrant(size)
-    print(board)
+    CreateQuadrant(size, 0)
+    PrintArray(board)
+
+def PrintArray(board):
+    temp = ""
+    for y in range(len(board)):
+        for x in range(len(board[0])):
+            temp += str(board[x][y][0])
+        temp += "\n"
+    print(temp)
 
 def CreateQuadrant(height, dir):
     wh = height/2 
@@ -19,6 +27,6 @@ def CreateQuadrant(height, dir):
     if wh < 2:
         return
     else:
-        CreateQuadrant(wh)
+        CreateQuadrant(wh, wd)
 
-CreateArray(2)
+CreateArray(4)
