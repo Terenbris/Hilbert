@@ -1,0 +1,1 @@
+print(format(2, '02b')[1])
