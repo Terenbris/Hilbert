@@ -94,5 +94,19 @@ d   0       1       2       3
 
 xv = 2 - (j*2) - i + (4*i*j)
 
-need to base order on direction and past piece, which should be possible from direction of placing
-the individual blocks.
+need to base order on direction and past piece, which should be possible from direction 
+of placing the individual blocks.
+
+
+
+>v>v >v>v
+^>^v ^>^v
+^<v< ^<v<
+>^>> >^>v
+
+^v<< v<<v
+^<>^ >v^<
+>v^< v<>v
+^>>^ >>^>
+
+
