@@ -12,7 +12,7 @@ def lsystem(axioms, rules, iterations):
 
 def PrintArray(board):
     temp = ""
-    w = 1
+    w = 0
     for y in range(len(board)):
         for x in range(len(board[0])):
             if w == 0:
@@ -28,6 +28,7 @@ def PrintArray(board):
                     temp += '<'
                 else:
                     temp += 'X'
+            temp += ":"
         temp += "\n"
     print(temp)
 
@@ -37,10 +38,12 @@ board = [[6 for i in range(32)] for j in range(32)]
 direction = 1
 x = 0
 y = 31
+step = 0
 print(instructions)
 for i in instructions:
 
     if i == "F":
+        step+=1
         if direction == 0:
             y-=1
         elif direction == 1:
@@ -58,6 +61,7 @@ for i in instructions:
     elif direction < 0:
         direction = 3
 
-    board[x][y] = direction
+    board[x][y] = step
+    
 
 PrintArray(board)
